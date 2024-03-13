@@ -1,6 +1,7 @@
 #cloud-config 
 #Only value that needs to be inserted is the token. Insert as is without paranthesis
 write_files:
+#ves
 - path: /etc/hosts
   content: |
     # IPv4 and IPv6 localhost aliases 
@@ -14,10 +15,10 @@ write_files:
   content: |
     Vpm:
       ClusterType: ce
-      Token:                                  
+      Token: 840c548f-6f56-4fc1-a810-ce1132da6024
       MauricePrivateEndpoint: https://register-tls.ves.volterra.io
       MauriceEndpoint: https://register.ves.volterra.io
-      CertifiedHardwareEndpoint: https://vesio.blob.core.windows.net/releases/certified-hardware/azure.yml
+      CertifiedHardwareEndpoint: https://vesio.blob.core.windows.net/releases/certified-hardware/aws.yml
     Kubernetes:
       EtcdUseTLS: True
       Server: vip
